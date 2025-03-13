@@ -4,16 +4,25 @@ declare(strict_types=1);
 
 require __DIR__ . '/CookBooks.php';
 
-function sortBooks(array $cookbooks, string $sortKey, string $order = 'asc')
-{
-    usort($cookbooks, function ($a, $b) use ($sortKey, $order) {
-        return $order === "asc" ? strcmp($a[$sortKey], $b[$sortKey]) : strcmp($b[$sortKey], $a[$sortKey]);
-    });
+$sortOption = $_GET['sort'] ?? 'title_asc';
 
+function SortBooks(array $cookbooks, string $sortOption): array
+{
+    usort($cookbooks, function ($a, $b) use ($sortOption) {
+        switch ($sortOption) {
+            case 'title_asc':
+                return strcmp($a['title'], $b['title']);
+            case 'title_desc':
+                strcmp($b['title'], $a['title']);
+            case 'author_asc':
+                return strcmp($a['author'], $b['author']);
+            case 'author_desc':
+                strcmp($b['author'], $a['author']);
+            default:
+                return 0;
+        }
+    });
     return $cookbooks;
 }
 
-$sortedByTitleAsc = sortBooks($cookbooks, "title", "asc");
-$sortedByTitleDesc = sortBooks($cookbooks, "title", "desc");
-$sortedByAuthorAsc = sortBooks($cookbooks, "author", "asc");
-$sortedByAuthorDesc = sortBooks($cookbooks, "author", "desc");
+$cookbooks = SortBooks($cookbooks, $sortOption);
