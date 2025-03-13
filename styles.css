@@ -1,0 +1,10 @@
+body {
+    box-sizing: border-box;
+    background-color: antiquewhite;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: rgb(34, 50, 34);
+}
