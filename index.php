@@ -21,6 +21,7 @@ require_once __DIR__ . '/CookBooks.php';
     </header>
 
     <main>
+        <?php for ($i = 0; $i < 3; $i++):?>
         <section class="bookshelf"> <!-- Container for bookshelf. Book foreach goes within section tags -->
 
 
@@ -31,8 +32,8 @@ require_once __DIR__ . '/CookBooks.php';
         $height = mt_rand($minHeight, $maxHeight);
          ?> <div class="book" style=" background-color: <?=$color?>; height: <?=$height?>px" ></div>
         <?php endforeach; ?>
-
         </section>
+        <?php endfor; ?>
     </main>
 
     <footer>

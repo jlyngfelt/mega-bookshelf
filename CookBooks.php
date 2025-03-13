@@ -10,6 +10,7 @@ $cookbooks = [
     ["title" => "The Nordic Cookbook", "author" => "Magnus Nilsson", "theme" => "Nordic cuisine"],
     ["title" => "Dishoom: From Bombay with Love", "author" => "Shamil Thakrar", "theme" => "Indian"],
     ["title" => "Oaxaca: Home Cooking from the Heart of Mexico", "author" => "Bricia Lopez", "theme" => "Regional Mexican"],
-    ["title" => "Vegetable Kingdom", "author" => "Bryant Terry", "theme" => "Plant-based cooking"]
+    ["title" => "Vegetable Kingdom", "author" => "Bryant Terry", "theme" => "Plant-based cooking"],
+    
 ];
 
