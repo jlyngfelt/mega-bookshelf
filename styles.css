@@ -24,9 +24,17 @@ h1 {
     border: 1px solid rgb(148, 148, 148);
     margin: 3px;
     width: 40px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl; /* Gör texten vertikal */
+    text-align: center;
+    padding: 5px;
 }
 
 p{
-    transform: rotate(90deg);
+   
+    margin: 0;
+
+
 }
