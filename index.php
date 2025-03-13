@@ -1,3 +1,9 @@
+<?php 
+
+require_once __DIR__ . '/CookBooks.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +22,10 @@
 
     <main>
         <section class="bookshelf"> <!-- Container for bookshelf. Book foreach goes within section tags -->
+
+        <?php foreach ($cookbooks as $book):
+         ?> <div class="book"></div>
+        <?php endforeach; ?>
 
         </section>
     </main>

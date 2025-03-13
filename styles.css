@@ -8,3 +8,15 @@ h1 {
     font-size: 2rem;
     color: rgb(34, 50, 34);
 }
+
+.bookshelf {
+    display: flex;
+
+}
+
+.book {
+    border: 2px solid red;
+    margin: 3px;
+    height: 200px;
+    width: 40px;
+}
