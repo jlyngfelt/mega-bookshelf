@@ -8,3 +8,20 @@ h1 {
     font-size: 2rem;
     color: rgb(34, 50, 34);
 }
+
+.bookshelf {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+
+    border: 30px solid rgb(130, 76, 56);
+
+}
+
+.book {
+    border: 1px solid rgb(148, 148, 148);
+    margin: 3px;
+
+    width: 40px;
+}
