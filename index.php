@@ -23,8 +23,13 @@ require_once __DIR__ . '/CookBooks.php';
     <main>
         <section class="bookshelf"> <!-- Container for bookshelf. Book foreach goes within section tags -->
 
+
         <?php foreach ($cookbooks as $book):
-         ?> <div class="book"></div>
+        $minHeight = 150;
+        $maxHeight = 200;
+        $color = sprintf("#%06X", mt_rand(0, 0xFFFFFF)); // Slumpmässig färg i hex
+        $height = mt_rand($minHeight, $maxHeight);
+         ?> <div class="book" style=" background-color: <?=$color?>; height: <?=$height?>px" ></div>
         <?php endforeach; ?>
 
         </section>

@@ -11,12 +11,15 @@ h1 {
 
 .bookshelf {
     display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
 
 }
 
 .book {
-    border: 2px solid red;
+    border: 1px solid rgb(148, 148, 148);
     margin: 3px;
-    height: 200px;
+
     width: 40px;
 }
